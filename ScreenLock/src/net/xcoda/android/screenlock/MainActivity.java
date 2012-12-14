@@ -1,7 +1,6 @@
 package net.xcoda.android.screenlock;
 
 import android.app.Activity;
-import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -18,11 +17,9 @@ public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// PowerManager mgr =
-		// (PowerManager)getSystemService(Context.POWER_SERVICE);
-		// mgr.goToSleep(1000);
-		Log.d("ScreenLock", "MainActivity oncreate.");
-
+		if (BuildConfig.DEBUG) {
+			Log.d("ScreenLock", "MainActivity oncreate.");
+		}
 		deviceMgr = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 		comp = new ComponentName(this, ScreenLockDeviceAdminReceiver.class);
 		if (!deviceMgr.isAdminActive(comp)) {
@@ -31,8 +28,8 @@ public class MainActivity extends Activity {
 					DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
 			intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, comp);
 			intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
-											getString(R.string.devicePolicyManagerMessage));
-			
+					getString(R.string.devicePolicyManagerMessage));
+
 			startActivityForResult(intent, 0);
 		} else {
 			Log.d("ScreenLock", "Main : admin is true");
@@ -45,10 +42,11 @@ public class MainActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode,
 			Intent intent) {
 		super.onActivityResult(requestCode, resultCode, intent);
-		if(resultCode == RESULT_OK){
+		if (resultCode == RESULT_OK) {
 			deviceMgr.lockNow();
-		}else{
-			Toast.makeText(this, R.string.failActivation, Toast.LENGTH_LONG).show();
+		} else {
+			Toast.makeText(this, R.string.failActivation, Toast.LENGTH_LONG)
+				 .show();
 		}
 		finish();
 	}

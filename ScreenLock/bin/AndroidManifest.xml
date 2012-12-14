@@ -16,7 +16,6 @@
             android:label="@string/title_activity_main" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -31,20 +30,13 @@
 		</activity>
         <receiver
             android:name="ScreenLockDeviceAdminReceiver"
-            android:label="screen lock"
+            android:label="Screen Lock"
             android:permission="android.permission.BIND_DEVICE_ADMIN" >
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/screenlock_admin" />
-
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-        <receiver 
-            android:name="VolumeReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
             </intent-filter>
         </receiver>
     </application>

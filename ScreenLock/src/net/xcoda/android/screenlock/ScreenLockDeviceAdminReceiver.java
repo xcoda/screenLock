@@ -4,7 +4,6 @@ import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.widget.Toast;
 
 public class ScreenLockDeviceAdminReceiver extends DeviceAdminReceiver {

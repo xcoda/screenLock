@@ -3,9 +3,9 @@
     <string name="app_name">화면잠금</string>
     <string name="title_activity_main">화면잠금</string>
     <string name="uninstall">화면잠금 제거</string>
-	<string name="tryAdminInactive">기기 관리자 권한 비활성화 시도 중..</string>
-	<string name="failActivation">기기 관리자 권한 활성화 실패</string>
-	<string name="deviceAdminEnabled">화면잠금 기기 관리자 권한 활성화 완료</string>
-	<string name="disableDeviceAdmin">화면잠금 기기 관리자 권한 비활성화 완료</string>
-	<string name="devicePolicyManagerMessage">화면잠금 앱을 실행하기 위해서 기기 관리자 권한을 필요로 합니다.화면잠금 앱은 [강제잠금] 기능만을 사용합니다. 이 앱을 제거 하고자 할때는 같이 설치되는 [화면잠금 제거]를 실행해야 합니다.</string>
+	<string name="tryAdminInactive">장치 관리자 권한 비활성화 시도 중..</string>
+	<string name="failActivation">장치 관리자 권한 활성화 실패</string>
+	<string name="deviceAdminEnabled">화면잠금 장치 관리자 권한 활성화 완료</string>
+	<string name="disableDeviceAdmin">화면잠금 장치 관리자 권한 비활성화 완료</string>
+	<string name="devicePolicyManagerMessage">화면잠금 앱을 실행하기 위해서 장치 관리자 권한을 필요로 합니다.\n화면잠금 앱은 [강제잠금] 기능만을 사용합니다.\n이 앱을 제거 하고 싶을 때는 이 앱과 함께 설치되는 [화면잠금 제거]를 실행해서 제거하셔야 합니다.</string>
 </resources>

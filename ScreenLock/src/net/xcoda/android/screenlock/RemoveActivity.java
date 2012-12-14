@@ -23,7 +23,6 @@ public class RemoveActivity extends Activity {
 			deviceMgr.removeActiveAdmin(cmpName);
 		}else{
 			Log.d("ScreenLock", "Remove admin is false");
-//			Toast.makeText(this, "ScreenLock is not admin active.", Toast.LENGTH_LONG).show();
 			Uri uri = Uri.fromParts("package", "net.xcoda.android.screenlock", null);
 			Intent i = new Intent(Intent.ACTION_DELETE,uri );
 			i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
